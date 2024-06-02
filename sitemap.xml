@@ -4,28 +4,63 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
 <url>
   <loc>https://hiring-content-writer.netlify.app/</loc>
-  <lastmod>2024-06-02T07:20:16+00:00</lastmod>
+  <lastmod>2024-06-02T11:02:04+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://hiring-content-writer.netlify.app/services</loc>
-  <lastmod>2024-06-02T07:20:16+00:00</lastmod>
+  <lastmod>2024-06-02T11:02:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hiring-content-writer.netlify.app/workshops/</loc>
+  <lastmod>2024-06-02T11:02:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://hiring-content-writer.netlify.app/job-description</loc>
-  <lastmod>2024-06-02T07:20:16+00:00</lastmod>
+  <lastmod>2024-06-02T11:02:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://hiring-content-writer.netlify.app/contact</loc>
-  <lastmod>2024-06-02T07:20:16+00:00</lastmod>
+  <lastmod>2024-06-02T11:02:04+00:00</lastmod>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hiring-content-writer.netlify.app/workshops/workshop-how-to-start-freelancing</loc>
+  <lastmod>2024-06-02T11:02:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hiring-content-writer.netlify.app/workshops/workshop-how-to-rank-your-website</loc>
+  <lastmod>2024-06-02T11:02:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hiring-content-writer.netlify.app/workshops/workshop-how-to-make-cool-apps-from-chatgpt</loc>
+  <lastmod>2024-06-02T11:02:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hiring-content-writer.netlify.app/workshops/workshop-web-development-kickstart-roadmap</loc>
+  <lastmod>2024-06-02T11:02:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hiring-content-writer.netlify.app/workshops/workshop-ai-ml-kickstart-roadmaps</loc>
+  <lastmod>2024-06-02T11:02:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hiring-content-writer.netlify.app/workshops/workshop-iot-for-kids</loc>
+  <lastmod>2024-06-02T11:02:04+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 
