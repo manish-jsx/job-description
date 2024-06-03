@@ -1,0 +1,14 @@
+# Allow all web crawlers to access the main parts of the site
+User-agent: *
+Allow: /
+
+# Disallow web crawlers from accessing specific directories
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+
+# Disallow access to specific files
+Disallow: /private-data.html
+
+# Specify the location of the sitemap
+Sitemap: https://hiring-content-writer.netlify.app/sitemap.xml
