@@ -1,28 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <!-- Firebase App (the core Firebase SDK) -->
-<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
-<!-- Add Firebase products that you want to use -->
-<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"></script>
-<script>
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-  apiKey: "AIzaSyAmB5vV6AONwlGx5T86EJxYz3xTVoURQtM",
-  authDomain: "hiring-content-writer.firebaseapp.com",
-  projectId: "hiring-content-writer",
-  storageBucket: "hiring-content-writer.appspot.com",
-  messagingSenderId: "465540796040",
-  appId: "1:465540796040:web:915138df4c075656dfd93d",
-  measurementId: "G-7WHJW35PJ6"
-  };
 
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-
-  // Initialize Firestore
-  const db = firebase.firestore();
-</script>
 
      <!-- Google Tag Manager -->
      <script async src="https://www.googletagmanager.com/gtag/js?id=G-3D16HHN038"></script>
@@ -125,31 +104,54 @@
             </div>
         </div>
     </footer>
-     <script>
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
+     <!-- Firebase SDKs -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+        import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAmB5vV6AONwlGx5T86EJxYz3xTVoURQtM",
+            authDomain: "hiring-content-writer.firebaseapp.com",
+            projectId: "hiring-content-writer",
+            storageBucket: "hiring-content-writer.appspot.com",
+            messagingSenderId: "465540796040",
+            appId: "1:465540796040:web:915138df4c075656dfd93d",
+            measurementId: "G-7WHJW35PJ6"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // Form submission handling
+        document.getElementById('contact-form').addEventListener('submit', async function(e) {
             e.preventDefault();
 
-            var name = document.getElementById('name').value;
-            var email = document.getElementById('email').value;
-            var mobile = document.getElementById('mobile').value;
-            var message = document.getElementById('message').value;
+            // Get the values from the form fields
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const mobile = document.getElementById('mobile').value;
+            const message = document.getElementById('message').value;
 
-            db.collection("contactMessages").add({
-                name: name,
-                email: email,
-                mobile: mobile,
-                message: message,
-                timestamp: firebase.firestore.FieldValue.serverTimestamp()
-            })
-            .then((docRef) => {
-                console.log("Document written with ID: ", docRef.id);
+            try {
+                // Add the collected data to Firestore
+                await addDoc(collection(db, "contactMessages"), {
+                    name: name,
+                    email: email,
+                    mobile: mobile,
+                    message: message,
+                    timestamp: serverTimestamp()
+                });
+
+                console.log("Document successfully written!");
                 alert("Message sent successfully!");
                 document.getElementById('contact-form').reset();
-            })
-            .catch((error) => {
-                console.error("Error adding document: ", error);
+            } catch (error) {
+                console.error("Error writing document: ", error);
                 alert("Error sending message. Please try again.");
-            });
+            }
         });
     </script>
 
