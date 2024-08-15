@@ -11,4 +11,4 @@ Disallow: /tmp/
 Disallow: /private-data.html
 
 # Specify the location of the sitemap
-Sitemap: https://hiring-content-writer.netlify.app/sitemap.xml
+Sitemap: https://octavertexmedia.netlify.app/sitemap.xml
